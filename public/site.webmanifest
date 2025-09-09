@@ -1,0 +1,21 @@
+{
+    "name": "Afrix",
+    "short_name": "Afrix",
+    "description": "Afrix - Plateforme d'opportunités uniques et innovantes",
+    "icons": [
+        {
+            "src": "/icon.png",
+            "sizes": "1x1",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f53003",
+    "background_color": "#FDFDFC",
+    "display": "standalone",
+    "start_url": "/"
+}

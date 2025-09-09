@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdfcfb;
+    color: #1b1b18;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e4e2df;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dark .container {
+    background-color: #161615;
+    border-color: #2a2a26;
+    color: #A1A09A;
+}
+.header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.header img {
+    height: 64px;
+    max-width: 100%;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.dark h1 {
+    color: #A1A09A;
+}
+.text-sm {
+    font-size: 14px;
+    color: #706f6c;
+}
+.dark .text-sm {
+    color: #A1A09A;
+}
+.text-xs {
+    font-size: 12px;
+    color: #999;
+}
+.dark .text-xs {
+    color: #A1A09A;
+}
+.text-bold {
+    font-weight: 600;
+}
+.code-box {
+    background-color: #fff5ed;
+    color: #f53003;
+    text-align: center;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+.dark .code-box {
+    background-color: #2A2A2A;
+    color: #FF4433;
+}
+.button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.button-primary {
+    background-color: #1b1b18;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+.dark .button-primary {
+    background-color: #E3B778;
+    color: #1C1C1A;
+    border: 1px solid #A6794F;
+}
+.button-secondary {
+    background-color: #E3B778;
+    color: #1a1a1a;
+    border: 1px solid #A6794F;
+}
+.button:hover {
+    transform: scale(1.05);
+}
+.icon {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+hr {
+    border: 0;
+    border-top: 1px solid #e4e2df;
+    margin: 24px 0;
+}
+.dark hr {
+    border-top: 1px solid #2a2a26;
+}
+.link {
+    color: #f53003;
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: underline;
+}
+.dark .link {
+    color: #FF4433;
+}
+.text-center {
+    text-align: center;
+}
+.mb-2 {
+    margin-bottom: 8px;
+}
+.mb-3 {
+    margin-bottom: 12px;
+}
+.mb-4 {
+    margin-bottom: 16px;
+}
+.mt-6 {
+    margin-top: 24px;
+}

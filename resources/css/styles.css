@@ -1,0 +1,615 @@
+
+
+
+.cart-container {
+ 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                0 0 30px rgba(100, 149, 237, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+
+.cart-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        rgba(100, 149, 237, 0) 0%, 
+        rgba(100, 149, 237, 1) 50%, 
+        rgba(100, 149, 237, 0) 100%);
+    animation: borderFlow 3s linear infinite;
+    z-index: 1;
+}
+
+@keyframes borderFlow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+
+.cart-container .row.fw-bold {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: #64ffda;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    border: none;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+
+.cart-container .row.align-items-center {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.cart-container .row.align-items-center:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.carousel-thumbnail {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-thumbnail:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.cart-container .futuristic-input {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.quantity-btn {
+    background: linear-gradient(145deg, #6c5ce7, #a8a4e6);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+}
+
+.quantity-btn:hover {
+    background: linear-gradient(145deg, #a8a4e6, #6c5ce7);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+}
+
+.quantity-input {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.btn-outline-danger {
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-danger:hover {
+    background: #ff4757;
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+}
+
+.futuristic-total {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    
+}
+
+.futuristic-total::before{
+    content: '';
+    animation: borderFlow 3s linear infinite;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        rgba(100, 149, 237, 0) 0%, 
+        rgba(100, 149, 237, 1) 50%, 
+        rgba(100, 149, 237, 0) 100%);
+    position: absolute;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.4); }
+    100% { box-shadow: 0 0 0 15px rgba(100, 255, 218, 0); }
+}
+
+/* Boutons d'action */
+.futur-btn {
+    border-radius: 50px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    color: white;
+}
+
+.futur-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.futur-btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary.futur-btn {
+    background: linear-gradient(145deg, #6c5ce7, #0984e3);
+}
+
+/* Panier vide */
+.empty-cart {
+    animation: fadeIn 1s ease;
+}
+
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+
+.dark-mode .cart-container {
+    background: linear-gradient(145deg, #0f0f1a, #0a0a1f);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                0 0 30px rgba(100, 149, 237, 0.2);
+}
+
+.dark-mode .futuristic-input {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+@keyframes itemEntry {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cart-container .row.align-items-center {
+    animation: itemEntry 0.6s ease forwards;
+}
+
+.cart-container .row.align-items-center:nth-child(1) { animation-delay: 0.1s; }
+.cart-container .row.align-items-center:nth-child(2) { animation-delay: 0.2s; }
+.cart-container .row.align-items-center:nth-child(3) { animation-delay: 0.3s; }
+
+
+.cart-notification {
+    position: absolute;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    z-index: 100;
+    animation: notificationEntry 0.3s ease-out;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+}
+
+.success {
+    background: linear-gradient(135deg, #2ed573, #20bfa5);
+    color: white;
+}
+
+.error {
+    background: linear-gradient(135deg, #ff4757, #ff6b6b);
+    color: white;
+}
+
+@keyframes notificationEntry {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+@keyframes itemExit {
+    0% { 
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 500px;
+    }
+    100% { 
+        opacity: 0;
+        transform: translateY(-20px);
+        max-height: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+.futuristic-swal , .swal2{
+    color: white;
+    border: 2px solid var(--or-metallise) !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 30px rgba(108, 92, 231, 0.4) !important;
+    background: linear-gradient(145deg, var(--bs-dark), var(--bs-dark)) !important;
+}
+
+.swal2-confirm {
+    background: linear-gradient(145deg, #6c5ce7, #0984e3) !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.swal2-cancel {
+    background: linear-gradient(145deg, #ff4757, #ff6b6b) !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+
+
+.cart-items {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--black-1);
+}
+
+.item-quantity {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+}
+
+.item-category {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+.item-price {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.item-total {
+    font-weight: bold;
+    color: var(--bs-warning);
+    font-size: 1.1rem;
+    min-width: 100px;
+    text-align: right;
+}
+
+
+
+
+.modal-content.bg-dark-2 {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+}
+
+.border-or {
+    border-color: var(--or-metallise) !important;
+}
+
+.border-bottom-or {
+    border-bottom: 2px solid var(--or-metallise);
+}
+
+.border-top-or {
+    border-top: 2px solid var(--or-metallise);
+}
+
+.text-or {
+    color: var(--or-metallise);
+}
+
+.btn-or {
+    background-color: var(--or-metallise);
+    color: #1a1a2e;
+    border: none;
+}
+
+.btn-or:hover {
+    background-color: #d4af37;
+}
+
+.hover-effect {
+    transition: all 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.futuristic-input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--or-metallise);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.quantit-input {
+    background: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.quantit-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+.futuristic-modal {
+    backdrop-filter: blur(5px);
+   
+}
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 1.75rem auto;
+}
+
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    animation: modalShow 0.3s ease-out;
+    background: linear-gradient(145deg, #1e1e2e, #16213e);
+}
+
+@keyframes modalShow {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--or-metallise);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+
+
+/* Animation d'entrée */
+@keyframes swal2-show {
+    0% {
+        transform: scale(0.7);
+    }
+    45% {
+        transform: scale(1.05);
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.color-option.active {
+    border-color: var(--bs-success);
+    transform: scale(1.2);
+}
+
+.variant-option {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.variant-option::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--or-metallise);
+    transition: width 0.3s ease;
+}
+
+.variant-option.active {
+    background: var(--or-metallise);
+    color: #1a1a2e;
+}
+
+.variant-option.active::after {
+    width: 100%;
+}
+
+/* Animation de sortie */
+@keyframes swal2-hide {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.modal.futuristic-modal.show .modal-dialog {
+    animation: swal2-show 0.3s;
+}
+
+.modal.futuristic-modal.hide .modal-dialog {
+    animation: swal2-hide 0.3s;
+}
+
+/* Badge de quantité sur les variantes */
+.variant-quantity-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: var(--or-metallise);
+    color: #1a1a2e;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.color-option {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.variant-option {
+    position: relative;
+    padding: 0.25rem 0.5rem;
+}
+
+.selected-variants-display {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+
+.custom-message-textarea {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--or-metallise);
+    color: white;
+    resize: none;
+}
+
+.custom-message-textarea:focus {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-color: var(--or-metallise);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}

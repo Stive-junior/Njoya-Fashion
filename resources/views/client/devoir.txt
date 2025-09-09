@@ -1,0 +1,11 @@
+ Notepad++
+ Cmder
+ Android Studio
+ JDK
+ Android SDK (Api 35)
+ FVM ( Flutter Version MObile)
+
+
+App Flutter : 
+1- photo profil
+2-Splash Screen

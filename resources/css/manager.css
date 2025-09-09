@@ -1,0 +1,26 @@
+
+      
+        
+        @media (max-width: 992px) {
+            .manager-sidebar {
+                width: 80px;
+                overflow: hidden;
+            }
+            
+           
+            
+            .sidebar-brand span,
+            .sidebar-menu .nav-link span {
+                display: none;
+            }
+            
+            .sidebar-menu .nav-link {
+                text-align: center;
+                padding: 12px 5px;
+            }
+            
+            .sidebar-menu .nav-link i {
+                margin-right: 0;
+                font-size: 1.2rem;
+            }
+        }
